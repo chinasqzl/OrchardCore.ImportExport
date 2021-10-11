@@ -1,0 +1,10 @@
+﻿@model ImportExportSettingsViewModel
+
+<a class="btn @(Model.ImportExist ? "btn-primary" : "btn-secondary")"
+   href="@Url.Action("Index", "Admin", new { area = "OrchardCore.ImportExport",id=$"{Model.ContentTypeId}_Import" })">
+    导入
+</a>
+<a class="btn @(Model.ExportExist ? "btn-primary" : "btn-secondary")"
+   href="@Url.Action("Index", "Admin", new { area = "OrchardCore.ImportExport",id=$"{Model.ContentTypeId}_Export" })">
+    导出
+</a>
